@@ -1,0 +1,54 @@
+/* Sidebar.css */
+.SidebarAbout {
+    background-color: #f0f0f0; /* Fondo gris */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.sidebar-container-about {
+    
+    height: 100%;
+    width: 260px;
+    background-color: #9b0404;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  
+.sidebar-about-text {
+    background-color: rgb(255, 255, 255);
+    font-size: .76em;
+    padding-top: 1px;
+    border-radius: 15px;
+}
+
+#text-sb {
+    text-align: left;
+    margin-left: 4px;
+}
+
+#mail-sb {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#text-img-sb{
+    color: whitesmoke;
+    text-align: left;
+    padding-left: 10px;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+#techImg {
+    width: 70px;
+    padding: 5px;
+}
+
+#wey2 {
+    width: 100%;
+}

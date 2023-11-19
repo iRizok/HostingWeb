@@ -1,0 +1,71 @@
+/* ThreePartComponent.css */
+.three-part-container {
+    display: flex;
+    width: 100%;
+    padding-top: 91px;
+    background-color: #c01717;
+    color: white;
+  }
+  
+  .first-part,
+  .second-part,
+  .third-part {
+    height: 258px; /* Ajusta la altura según tus necesidades */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .first-part{
+    flex: .8;
+  }
+  
+  .third-part,
+  .second-part  {
+    flex: 2.2;
+  }
+
+  .info-container{
+    background-color: rgba(255, 105, 5, 0.2);
+    border-radius: 15px;
+  }
+
+  #info-ul {
+    list-style-type: none; /* Elimina los bullets predeterminados de la lista */
+    padding: 0; /* Elimina el padding predeterminado de la lista */
+  }
+  
+  #info-li {
+    margin-bottom: 5px; 
+    margin-left: 20%;
+    display: flex;
+    align-items: center;  
+  }
+  
+  #bullet-point {
+    margin-right: 10px; /* Ajusta el espaciado entre la imagen y el texto según sea necesario */
+    width: 1.2em;
+  }
+
+  #title-show {
+    text-shadow: 2px 2px 5px black;
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+  }
+  
+  #info-btn {
+    background-image: linear-gradient(white, red);
+    font-weight: bolder;
+    border-radius: 6px;
+    border-color: #a11a1a;
+    
+    margin-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 78%;
+  }
+
+  #linuxIcon,
+  #winIcon {
+    width: 88px;
+  }

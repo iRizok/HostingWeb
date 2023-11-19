@@ -1,0 +1,75 @@
+
+
+.sidebar-head {
+  background-image: linear-gradient(rgb(158, 0, 0), rgb(255, 0, 0));
+  color: #f0f0f0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+/* Sidebar.css */
+
+.sidebar-container {
+    height: 102.5%;
+    width: 260px;
+    background-color: #9b0404;
+    padding-bottom: 30px;
+    z-index: 100; /* Ajusta el valor según sea necesario para colocarlo sobre otros elementos */
+}
+
+.sidebar-button-container {
+    padding-top: 45px;
+}
+
+.sidebar-button {
+    margin-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sidebar-button button {
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    background-color: rgb(247, 54, 54);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    height: 43px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra 3D */
+  }
+  
+  .sidebar-button button:hover {
+    background-color: #e60000;
+    color: white;
+  }
+
+  .content {
+    margin-top: 0px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: .9em;
+  }
+
+  .conectados-container {
+    color: white;
+    text-align: left;   
+    padding-top: 25%;
+    padding-left: 30%;
+  }
+
+  #btnIcon {
+    width: 2em;
+    margin-right: 5px;
+    
+    
+  }

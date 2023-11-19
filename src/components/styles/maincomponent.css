@@ -1,0 +1,21 @@
+/* combinedSidebar.css */
+.combined-sidebar-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .combined-sidebar-left {
+    flex: 1;
+    
+  }
+  
+  .combined-sidebar-right {
+    flex: 1;
+    
+  }
+  
+  .combined-middle {
+    flex: 3;
+  }
+  /* Agrega los estilos de Sidebar y SidebarAbout según sea necesario */
+  

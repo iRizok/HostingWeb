@@ -1,0 +1,65 @@
+/* Footer.css */
+.footer {
+    background-color: rgb(216, 215, 215); /* Fondo del footer */
+    color: #333; /* Color del texto en el footer */
+    font-size: .9em;
+    padding: 7px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between; 
+    text-align: left;
+    width: 100%;
+}
+  .footer-section {
+    /* Estilos para cada sección del footer */
+    /* Puedes personalizar los estilos según tu diseño */
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Añade estilos adicionales según sea necesario */
+  
+.left-section,
+.right-section {
+  /* Estilos para dividir cada sección en dos */
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section label,
+.right-section label {
+  margin-bottom: 8px;
+}
+
+.left-section input,
+.right-section textarea {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 3px;
+  margin-bottom: 7px;
+}
+
+.left-section button {
+    padding: 4px;  
+    font-size: .82em;
+    width: fit-content; 
+    align-self: center;
+}
+
+#condiciones {
+    padding: 10px;
+    font-size: .8em
+}
+
+#sugerencias {
+    font-size: .7em;
+}
+
+#copy {
+   align-self: self-end;
+}
+#address {
+   
+    padding-left: 15%;
+}
+
+/* Añade 
