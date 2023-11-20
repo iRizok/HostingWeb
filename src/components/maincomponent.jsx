@@ -4,13 +4,41 @@ import Sidebar from "./sidebarAcordeon";
 import SidebarAbout from "./sidebarAbout";
 import "./styles/maincomponent.css";
 import CompañiaCard from "./compañia";
+import Servicios from "./servicios";
+import Soluciones from "./soluciones";
+import Clientes from "./clientes";
+import Contacto from "./contacto";
 
-const CombinedSidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const CombinedSidebar = ({ activeComponentIndex }) => {
+  let activeComponent;
 
-  const handleSidebarClick = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  switch (activeComponentIndex) {
+    case 0:
+      activeComponent = <CompañiaCard />;
+      console.log(activeComponentIndex)
+      break;
+    case 1:
+      activeComponent = <Servicios />;
+      console.log(activeComponentIndex)
+      break;
+    case 2:
+      activeComponent = <Soluciones />;
+      console.log(activeComponentIndex)
+      break;
+    case 3:
+      activeComponent = <Clientes />;
+      console.log(activeComponentIndex)
+      break;
+    case 4:
+      activeComponent = <Contacto />;
+      console.log(activeComponentIndex)
+      break;
+    // Añade más casos según sea necesario
+    default:
+      activeComponent = <CompañiaCard />;
+      console.log("dasd", activeComponentIndex)
+      break;
+  }
 
   return (
     <div className="combined-sidebar-container">
@@ -18,7 +46,7 @@ const CombinedSidebar = () => {
         <Sidebar />
       </div>
       <div className="combined-middle">
-        <CompañiaCard></CompañiaCard>
+        {activeComponent}
       </div>
       <div className="combined-sidebar-right">
         <SidebarAbout />

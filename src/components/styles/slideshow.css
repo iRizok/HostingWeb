@@ -24,10 +24,43 @@
     flex: 2.2;
   }
 
+  .third-part {
+    width: 200px;
+    background-image: url("../../assets/slideshow/server.png");
+  }
+
   .info-container{
     background-color: rgba(255, 105, 5, 0.2);
     border-radius: 15px;
   }
+
+  .item{
+    width: 100px;
+    align-items: center;
+  }
+
+  .alice-carousel{
+    width: 200px;
+  }
+
+  #wey1,#wey2ss,#wey3,#wey4 {
+    margin-top: 15px;
+    margin-left: 200%;
+    width: 100px;
+  }
+
+  #wey2ss{
+    filter: grayscale(100%);
+  }
+
+  #wey3{
+    filter:invert(100%)
+  }
+
+  #wey4{
+    filter:brightness(300%);
+  }
+
 
   #info-ul {
     list-style-type: none; /* Elimina los bullets predeterminados de la lista */
@@ -69,3 +102,24 @@
   #winIcon {
     width: 88px;
   }
+
+  /* En tu archivo CarouselComponent.css */
+.alice-carousel__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alice-carousel__dots-item {
+  background-color: rgb(194, 8, 8)585; /* Color de fondo de los dots inactivos */
+  border-radius: 50%;
+  width: 10px; /* Tamaño del dot */
+  height: 10px;
+  margin: 0 5px; /* Espacio entre los dots */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.alice-carousel__dots-item.active {
+  background-color: #442323; /* Color de fondo del dot activo */
+}
