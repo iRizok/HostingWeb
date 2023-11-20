@@ -9,7 +9,16 @@ import redDot from "../assets/slideshow/red-dot.png"
 import serverBg from "../assets/slideshow/server.png"
 import wey from "../assets/slideshow/wey.png"
 import windowsIcon from "../assets/slideshow/windows-logo.png"
+import AliceCarousel from 'react-alice-carousel';
 
+import "react-alice-carousel/lib/alice-carousel.css";
+
+const items = [
+    <div className="item" data-value="1"><img id="wey1" src={wey} alt="" /></div>,
+    <div className="item" data-value="2"><img id="wey2ss" src={wey} alt="" /></div>,
+    <div className="item" data-value="3"><img id="wey3" src={wey} alt="" /></div>,
+    <div className="item" data-value="4"><img id="wey4" src={wey} alt="" /></div>,
+];
 
 const SliderComponent = () => {
     return (
@@ -34,7 +43,23 @@ const SliderComponent = () => {
                     <button id='info-btn'>Ver mas</button>
                 </div>
             </div>
-            <div className="third-part"></div>
+            <div className="third-part">
+                <AliceCarousel
+                    mouseTracking
+                    items={items}
+                    autoHeight="true"
+                    controlsStrategy="alternate"
+                    autoPlayInterval={2000}
+                    autoPlayDirection="rtl"
+                    autoPlay={true}
+                    fadeOutAnimation={true}
+                    disableAutoPlayOnAction={true}
+                    showSlideInfo={true}
+                    stopAutoPlayOnHover={true}
+                    itemsOnSlide={0}
+                    disableButtonsControls="true"
+                />
+            </div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import logo from '../assets/navbar/Vista (16).png'
 import ayudaimg from "../assets/navbar/iMessage_icon.png"
 import phone_icon from "../assets/navbar/phone_icon.png"
 
-const Navbar = () => {
+const Navbar = ({ onNavbarButtonClick }) => {
   return (
     <>
       <nav className="navbar">
@@ -28,19 +28,19 @@ const Navbar = () => {
             </label>
           
           <ul className="nav-btns">
-            <li id="compañiaNavBtn" name="compañiaNavBtn">
+            <li id="compañiaNavBtn" name="compañiaNavBtn"  onClick={() => onNavbarButtonClick(0)}>
               Compañia
             </li>
-            <li id="servicioNavBtn" name="servicioNavBtn">
+            <li id="servicioNavBtn" name="servicioNavBtn" onClick={() => onNavbarButtonClick(1)}>
               Servicios
             </li>
-            <li id="solucionesNavBtn" name="solucionesNavBtn">
+            <li id="solucionesNavBtn" name="solucionesNavBtn" onClick={() => onNavbarButtonClick(2)}>
               Soluciones
             </li>
-            <li id="clientesNavBtn" name="clientesNavBtn">
+            <li id="clientesNavBtn" name="clientesNavBtn" onClick={() => onNavbarButtonClick(3)}>
               Clientes
             </li>
-            <li id="contactoNavBtn" name="contactoNavBtn">
+            <li id="contactoNavBtn" name="contactoNavBtn"onClick={() => onNavbarButtonClick(4)}>
               Contacto
             </li>
           </ul>

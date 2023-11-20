@@ -9,17 +9,21 @@ import Sidebar from './components/sidebarAcordeon'
 import SidebarAbout from './components/sidebarAbout'
 import CombinedSidebar from './components/maincomponent'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [activeComponentIndex, setActiveComponentIndex] = useState(0);
+
+  const handleNavbarButtonClick = (index) => {
+    setActiveComponentIndex(index);
+  };
 
   return (
     <>
-     <Navbar></Navbar>
-     <Slideshow></Slideshow>
-     <CombinedSidebar></CombinedSidebar>
-     <Footer></Footer>
+      <Navbar onNavbarButtonClick={handleNavbarButtonClick} />
+      <Slideshow />
+      <CombinedSidebar activeComponentIndex={activeComponentIndex} />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

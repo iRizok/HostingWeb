@@ -1,0 +1,59 @@
+/* ClientesCard.css */
+.clientes-Titulo {
+    text-align: center;
+}
+
+.clientes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 15px;
+  }
+  
+  .clientes-card {
+    background-image: linear-gradient( rgb(240, 236, 236),rgb(255, 221, 221));
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  
+  #cliente-item {
+    background-image: linear-gradient(rgb(255, 196, 196), rgb(240, 236, 236), rgb(255, 196, 196));
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #cliente-item a {
+    text-decoration: none;
+  }
+  
+  #cliente-item img {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    border-radius: 50%;
+  }
+
+  #cliente-Img {
+    width: 70%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    
+  }
+
+  #detalles-Cliente {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(118, 170, 212));
+    align-self: flex-end;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Puedes añadir más estilos según sea necesario */
+  
