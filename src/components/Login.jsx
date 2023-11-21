@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../images/iniciar-sesion.png";
-import "../styles/LoginStyle.css";
+import "./styles/LoginStyle";
 import { useNavigate } from "react-router-dom";
 import { loginAdmin } from "../services/admin.services";
 import { Link } from "react-router-dom";
