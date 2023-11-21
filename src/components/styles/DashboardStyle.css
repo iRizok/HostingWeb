@@ -1,0 +1,58 @@
+/* styles/DashboardStyle.css */
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.section-container {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  background-color: #ff5733; /* Fondo rojo */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.section-content {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para las gráficas */
+.canvas-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo para las etiquetas de las gráficas */
+.chart-label {
+  color: #333; /* Texto oscuro */
+}
+
+/* Estilo para los tooltips en las gráficas */
+.tooltip {
+  background-color: #ff5733; /* Fondo rojo */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
