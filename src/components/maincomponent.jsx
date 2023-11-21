@@ -10,6 +10,7 @@ import Clientes from "./clientes";
 import Contacto from "./contacto";
 import ListaSugerencias from "./sugerencias";
 import PlanCrud from "./crudPlanes";
+import Dashboard_total from "./Dashboard";
 
 const CombinedSidebar = ({ activeComponentIndex }) => {
   let activeComponent;
@@ -41,6 +42,10 @@ const CombinedSidebar = ({ activeComponentIndex }) => {
       break;
     case 6:
       activeComponent = <PlanCrud />;
+      console.log(activeComponentIndex)
+      break;
+      case 7:
+      activeComponent = <Dashboard_total/>;
       console.log(activeComponentIndex)
       break;
     // Añade más casos según sea necesario

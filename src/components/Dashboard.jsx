@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
-import { listSolicitudes } from "../services/turno.services";
+import { listPlanes } from "../services/servicios.services";
 import Chart from "chart.js/auto";
-import "../styles/DashboardStyle.css";
+import "./styles/DashboardStyle.css";
 
 const Dashboard_total = () => {
   const [solicitudesData, setSolicitudesData] = useState({

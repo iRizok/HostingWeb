@@ -54,6 +54,11 @@ const Navbar = ({ onNavbarButtonClick,isLoggedIn, isAdmin, onLogout}) => {
             Editar Planes
           </li>
           )}
+          {isLoggedIn && isAdmin && (
+            <li id="dashboardNavBtn" name="dashboardNavBtn"onClick={() => onNavbarButtonClick(7)}>
+            Dashboard
+          </li>
+          )}
           </ul>
           </div>
         </div>
