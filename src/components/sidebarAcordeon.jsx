@@ -1,5 +1,5 @@
 // Sidebar.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/sidebarAcordeon.css";
 import techSupportIcon from "../assets/sidebarAcordeon/img-soporte-tecnico.png"
 import webHostIcon from "../assets/sidebarAcordeon/webHosting.png"
@@ -21,6 +21,20 @@ const Sidebar = () => {
   const handleClick = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const [totalVisitors, setTotalVisitors] = useState(0);
+
+  useEffect(() => {
+    // Incrementa el contador de visitantes al cargar la aplicación
+    const incrementVisitor = () => {
+      const currentVisitors = parseInt(localStorage.getItem('totalVisitors'), 10) || 0;
+      const newTotalVisitors = currentVisitors + 1;
+      localStorage.setItem('totalVisitors', newTotalVisitors.toString());
+      setTotalVisitors(newTotalVisitors);
+    };
+
+    incrementVisitor();
+  }, []);
 
   const buttons = [
     { icon: webHostIcon, title: "Web Hosting", content: "Contenido del botón 1" },
@@ -55,7 +69,7 @@ const Sidebar = () => {
       </div>
       <div className="conectados-container">
         <p id="onlineUsers">Conectados: </p>
-        <p id="onlineUsers">Visitas: </p>
+        <p id="onlineUsers">Visitas:  {totalVisitors}</p>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 /* Footer.css */
 .footer {
-    background-color: rgb(216, 215, 215); /* Fondo del footer */
+  background-image: linear-gradient(rgb(212, 212, 212), rgb(145, 142, 142),rgb(212, 212, 212));
     color: #333; /* Color del texto en el footer */
     font-size: .9em;
     padding: 7px;
@@ -60,6 +60,24 @@
 #address {
    
     padding-left: 15%;
+}
+
+#maps {
+  padding-left: 15%;
+  color: blue;
+}
+
+#politicas {
+  color: rgb(228, 148, 0);
+  margin-left: 15%;
+}
+
+#redesIcon {
+  margin-right: 15px;
+}
+
+#loginButton{
+  padding-left: 0%;
 }
 
 /* Añade 

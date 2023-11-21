@@ -1,0 +1,60 @@
+/* PlanList.css */
+
+.plan-list-container {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .plan-list-wrapper {
+    max-height: 800px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto;
+  }
+  
+  .plan-list {
+    list-style-type: none;
+    padding: 1px;
+    text-align: center;
+  }
+  
+  .plan-item {
+    background-image: linear-gradient( rgb(240, 236, 236),rgb(255, 221, 221));
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .plan-title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+  
+  .plan-description {
+    margin-bottom: 12px;
+  }
+  
+  .plan-characteristics {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .plan-characteristic-item {
+    margin-bottom: 5px;
+  }
+  
+  .download-button {
+    background-color: #db3434;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .download-button:hover {
+    background-color: #b92929;
+  }
+  

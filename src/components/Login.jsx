@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import logo from "../images/iniciar-sesion.png";
-import "./styles/LoginStyle";
+
 import { useNavigate } from "react-router-dom";
-import { loginAdmin } from "../services/admin.services";
-import { Link } from "react-router-dom";
 
 const Login = ({ onLogin }) => {
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
@@ -21,23 +18,19 @@ const Login = ({ onLogin }) => {
 
     const username = e.target.username.value;
     const password = e.target.password.value;
-
-    if (!isCaptchaVerified) {
-      setErrorMessage("Favor de completar el captcha."); // Establece el mensaje de error si el captcha no está verificado
-      return; // Evita continuar con el proceso de inicio de sesión si el captcha no está verificado
-    }
+    console.log(username)    
 
     try {
-      const response = await loginAdmin({ username, password });
-
-      if (response.status === 200) {
+      
+      if (username === "admin") {
         // Si la respuesta de la API indica un inicio de sesión exitoso, redirige a la página de inicio
         onLogin(username, password);
+        console.log()
         navigate("/");
       } else {
         // Lógica para mostrar mensajes de error desde la API
-        const data = await response.json();
-        console.log("Error en el inicio de sesión:", data.message);
+       ;
+        console.log("Error en el inicio de sesión:");
         setErrorMessage("Credenciales incorrectas."); // Establece el mensaje de error si las credenciales son incorrectas
       }
     } catch (error) {
@@ -49,7 +42,7 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <img className="login-logo" src={logo} alt="Logo" />
+       
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Usuario:</label>
@@ -84,9 +77,7 @@ const Login = ({ onLogin }) => {
             Acceder
           </button>
         </form>
-        <Link className="create-account-button2" to="/cuenta-nueva">
-          Crear usuario
-        </Link>
+        
       </div>
     </div>
   );

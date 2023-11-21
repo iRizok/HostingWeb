@@ -5,7 +5,8 @@ import logo from '../assets/navbar/Vista (16).png'
 import ayudaimg from "../assets/navbar/iMessage_icon.png"
 import phone_icon from "../assets/navbar/phone_icon.png"
 
-const Navbar = ({ onNavbarButtonClick }) => {
+const Navbar = ({ onNavbarButtonClick,isLoggedIn, isAdmin, onLogout}) => {
+
   return (
     <>
       <nav className="navbar">
@@ -43,6 +44,16 @@ const Navbar = ({ onNavbarButtonClick }) => {
             <li id="contactoNavBtn" name="contactoNavBtn"onClick={() => onNavbarButtonClick(4)}>
               Contacto
             </li>
+            {isLoggedIn && isAdmin && (
+            <li id="sugerenciasNavBtn" name="sugerenciasNavBtn"onClick={() => onNavbarButtonClick(5)}>
+            Sugerencias
+          </li>
+          )}
+          {isLoggedIn && isAdmin && (
+            <li id="solicitudesNavBtn" name="solicitudesNavBtn"onClick={() => onNavbarButtonClick(6)}>
+            Editar Planes
+          </li>
+          )}
           </ul>
           </div>
         </div>

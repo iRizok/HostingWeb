@@ -1,0 +1,27 @@
+/* styles/contacto.css */
+
+.contacto-container {
+    text-align: center;
+  }
+  
+  .contacto-title {
+    color: #333;
+  }
+  
+  .contacto-info {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .contacto-subtitle {
+    color: #b90000;
+  }
+  
+  .contacto-text {
+    margin-top: 10px;
+  }
+  
+  /* Puedes agregar más estilos según sea necesario */
+  

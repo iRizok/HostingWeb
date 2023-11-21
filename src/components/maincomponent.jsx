@@ -8,6 +8,8 @@ import Servicios from "./servicios";
 import Soluciones from "./soluciones";
 import Clientes from "./clientes";
 import Contacto from "./contacto";
+import ListaSugerencias from "./sugerencias";
+import PlanCrud from "./crudPlanes";
 
 const CombinedSidebar = ({ activeComponentIndex }) => {
   let activeComponent;
@@ -31,6 +33,14 @@ const CombinedSidebar = ({ activeComponentIndex }) => {
       break;
     case 4:
       activeComponent = <Contacto />;
+      console.log(activeComponentIndex)
+      break;
+    case 5:
+      activeComponent = <ListaSugerencias />;
+      console.log(activeComponentIndex)
+      break;
+    case 6:
+      activeComponent = <PlanCrud />;
       console.log(activeComponentIndex)
       break;
     // Añade más casos según sea necesario

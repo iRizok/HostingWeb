@@ -1,0 +1,27 @@
+/* styles/soluciones.css */
+
+.soluciones-container {
+    text-align: center;
+  }
+  
+  .soluciones-title {
+    color: #333;
+  }
+  
+  .solucion-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .solucion-subtitle {
+    color: #b90000;
+  }
+  
+  .solucion-description {
+    margin-top: 10px;
+  }
+  
+  /* Puedes agregar más estilos según sea necesario */
+  
