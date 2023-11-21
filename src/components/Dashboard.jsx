@@ -1,23 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { Bar } from "react-chartjs-2";
-import { listPlanes } from "../services/servicios.services";
 import Chart from "chart.js/auto";
+import React, { useEffect, useState } from "react";
+import { Bar, Doughnut } from "react-chartjs-2";
+import { listSolicitudes } from "../services/contratos.services";
 import "./styles/DashboardStyle.css";
 
-const Dashboard_total = () => {
+const Dashboard = () => {
   const [solicitudesData, setSolicitudesData] = useState({
-    pendiente: 0,
-    realizado: 0,
+    inactivos: 0,
+    activos: 0,
+  });
+  const [contradosData, setConstratosData] = useState({
+    strarter: 0,
+    basico: 0,
+    nolimite: 0,
+    avanzado: 0,
   });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await listSolicitudes();
+        const API = "https://hostingwebapi.onrender.com/contratos";
+        const response = await fetch(`${API}/listarVigentes`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const data = await response.json();
         setSolicitudesData({
-          pendiente: parseInt(data.pendiente),
-          realizado: parseInt(data.realizado),
+          inactivos: parseInt(data.inactivos),
+          activos: parseInt(data.activos),
+        });
+
+        const response2 = await fetch(`${API}/listarNContratos`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data2 = await response2.json();
+        setConstratosData({
+          starter_contratados: parseInt(data2.starter),
+          basico_contratados: parseInt(data2.basico),
+          nolimite_contratos: parseInt(data2.nolimite),
+          avanzado_contratados: parseInt(data2.avanzado),
         });
       } catch (error) {
         console.error("Error al obtener datos de solicitudes:", error);
@@ -27,13 +53,29 @@ const Dashboard_total = () => {
     fetchData();
   }, []); // Este efecto se ejecuta una vez al cargar el componente
 
-  const chartData = {
-    labels: ["Pendientes", "Realizadas"],
+  const solicitudesChartData = {
+    labels: ["Inactivos", "Activos"],
     datasets: [
       {
-        label: "Total de Solicitudes",
-        data: [solicitudesData.pendiente, solicitudesData.realizado],
-        backgroundColor: ["#FF5733", "#33FF49"], // Colores para las barras
+        label: "Total de Contratos",
+        data: [solicitudesData.inactivos, solicitudesData.activos],
+        backgroundColor: ["#FF5activos3FF49"], // Colores para las barras
+      },
+    ],
+  };
+
+  const serviciosChartData = {
+    labels: ["Starter", "Básico", "No Límite", "Avanzado"],
+    datasets: [
+      {
+        label: "Número de Clientes por Servicio",
+        data: [
+          contradosData.strarter,
+          contradosData.basico,
+          contradosData.nolimite,
+          contradosData.avanzado,
+        ],
+        backgroundColor: ["#FF5733", "#33FF49", "#3366FF", "#FF33A6"], // Colores para las barras
       },
     ],
   };
@@ -49,9 +91,17 @@ const Dashboard_total = () => {
   return (
     <div className="dashboard-container">
       <h1>Dashboard con todas las Solicitudes</h1>
-      {solicitudesData && <Bar data={chartData} options={options} />}
+
+      {/* Gráfica de pastel para el número de contratos vigentes */}
+      {solicitudesData && (
+        <Doughnut data={solicitudesChartData} options={options} />
+      )}
+
+      {/* Gráfica de barras para el número de clientes por servicio */}
+      <h2>Número de Clientes por Servicio</h2>
+      {solicitudesData && <Bar data={serviciosChartData} options={options} />}
     </div>
   );
 };
 
-export default Dashboard_total;
+export default Dashboard;
