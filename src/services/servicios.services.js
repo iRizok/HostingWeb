@@ -18,7 +18,7 @@ export const listPlanes = () =>
   });
 
 export const findPlan = (idPlan) =>
-  fetch(`${API}/buscar/${idPlan}`, {
+  fetch(`${API}/exportarDetalles/${idPlan}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
