@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import "./styles/LoginStyle.css"
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ onLogin }) => {

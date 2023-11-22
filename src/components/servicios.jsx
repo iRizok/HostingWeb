@@ -28,6 +28,7 @@ const Servicios = () => {
 
   const handleDownload = async (id) => {
     try {
+      console.log(id)
       const response = await findPlan(id);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
