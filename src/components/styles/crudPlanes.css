@@ -1,0 +1,24 @@
+.crudContainer{
+    align-items: center;
+    text-align: center;
+}
+
+.formContainerCrud{
+    border-radius: 5%;
+    padding: 15px;
+    background-color: rgb(255, 227, 227);
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    text-align: right;
+}
+
+#input-Form{
+    width: 200px;
+    align-self:self-end;
+    margin-right: 12%;
+}
+
+#btnCrud{
+    margin: 5px;
+}

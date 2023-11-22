@@ -1,7 +1,7 @@
 /* styles/DashboardStyle.css */
 
 .dashboard-container {
-  max-width: 800px;
+  max-width: 72%;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff; /* Fondo blanco */

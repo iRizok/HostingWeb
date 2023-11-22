@@ -1,7 +1,7 @@
 import Chart from "chart.js/auto";
 import React, { useEffect, useState } from "react";
 import { Bar, Doughnut } from "react-chartjs-2";
-import { listSolicitudes } from "../services/contratos.services";
+
 import "./styles/DashboardStyle.css";
 
 const Dashboard = () => {
@@ -10,7 +10,7 @@ const Dashboard = () => {
     activos: 0,
   });
   const [contradosData, setConstratosData] = useState({
-    strarter: 0,
+    starter: 0,
     basico: 0,
     nolimite: 0,
     avanzado: 0,
@@ -39,12 +39,14 @@ const Dashboard = () => {
           },
         });
         const data2 = await response2.json();
+        console.log(data2)
         setConstratosData({
-          starter_contratados: parseInt(data2.starter),
-          basico_contratados: parseInt(data2.basico),
-          nolimite_contratos: parseInt(data2.nolimite),
-          avanzado_contratados: parseInt(data2.avanzado),
-        });
+          starter: parseInt(data2.starter_contratados),
+          basico: parseInt(data2.basico_contratados),
+          nolimite: parseInt(data2.nolimite_contratados),
+          avanzado: parseInt(data2.avanzado_contratados),
+        })
+        console.log(contradosData);
       } catch (error) {
         console.error("Error al obtener datos de solicitudes:", error);
       }
@@ -70,7 +72,7 @@ const Dashboard = () => {
       {
         label: "Número de Clientes por Servicio",
         data: [
-          contradosData.strarter,
+          contradosData.starter,
           contradosData.basico,
           contradosData.nolimite,
           contradosData.avanzado,
@@ -98,8 +100,8 @@ const Dashboard = () => {
       )}
 
       {/* Gráfica de barras para el número de clientes por servicio */}
-      <h2>Número de Clientes por Servicio</h2>
-      {solicitudesData && <Bar data={serviciosChartData} options={options} />}
+      <h2>Número de Servicios contratados</h2>
+      {contradosData && <Bar data={serviciosChartData} options={options} />}
     </div>
   );
 };

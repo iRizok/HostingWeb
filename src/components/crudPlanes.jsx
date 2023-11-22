@@ -136,60 +136,70 @@ const PlanCrud = () => {
     };
 
     return (
-        <div>
+        <div className="crudContainer">
             <h2>Añadir Nuevo Plan</h2>
+            <div className="formContainerCrud">
+
             <label>Nombre:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="nombre"
                 value={formData.nombre}
                 onChange={handleInputChange}
-            />
+                />
+            <br />
             <label>Precio:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="precio"
                 value={formData.precio}
                 onChange={handleInputChange}
-            />
+                />
+            <br />
             <label>Descripción:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="descripcion"
                 value={formData.descripcion}
                 onChange={handleInputChange}
-            />
+                />
+            <br />
             <label>Almacenamiento:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="almacenamiento"
                 value={formData.caracteristicas.almacenamiento}
                 onChange={handleCaracteristicasChange}
-            />
+                />
+            <br />
             <label>Transferencia:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="transferencia"
                 value={formData.caracteristicas.transferencia}
                 onChange={handleCaracteristicasChange}
-            />
+                />
+            <br />
             <label>Dominio:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="dominio"
                 value={formData.caracteristicas.dominio}
                 onChange={handleCaracteristicasChange}
-            />
+                />
+            <br />  
             <label>Otro:</label>
-            <input
+            <input id="input-Form"
                 type="text"
                 name="otro"
                 value={formData.caracteristicas.otro}
                 onChange={handleCaracteristicasChange}
-            />
+                />
+                <br />
+                  <button onClick={handleCreate}>Crear</button>
+                </div>
             {/* Agreg
           {/* Otros campos y características */}
-            <button onClick={handleCreate}>Crear</button>
 
             {/* Lista de planes */}
             <h2>Lista de Planes</h2>
@@ -200,7 +210,7 @@ const PlanCrud = () => {
                             <span onClick={() => handlePlanDetails(plan._id)}>
                                 {plan.nombre} - ${plan.precio}
                             </span>
-                            <button onClick={() => handleEdit(plan._id)} className="edit-button">
+                            <button id="btnCrud" onClick={() => handleEdit(plan._id)} className="edit-button">
                                 Editar
                             </button>
                             <button onClick={() => handleDelete(plan._id)} className="delete-button">
@@ -214,6 +224,7 @@ const PlanCrud = () => {
                                 <strong>Nombre:</strong> {plan.nombre}
                                 <br />
                                 <strong>Precio:</strong> ${plan.precio}
+                                <br />
                                 <strong>Descripcion:</strong> ${plan.descripcion}
                                 <br />
                                 <strong>Almacenamiento:</strong> {plan.caracteristicas.almacenamiento}
@@ -232,55 +243,62 @@ const PlanCrud = () => {
                             <div className="plan-edit-form">
                                 {/* Formulario de edición */}
                                 <label>Nombre:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="nombre"
                                     value={formData.nombre}
                                     onChange={handleInputChange}
                                 ></input>
+                                <br />
                                 <label>Precio:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="precio"
                                     value={formData.precio}
                                     onChange={handleInputChange}
                                 />
+                                 <br />
                                 <label>Descripción:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="descripcion"
                                     value={formData.descripcion}
                                     onChange={handleInputChange}
                                 />
+                                 <br />
                                 <label>Almacenamiento:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="almacenamiento"
                                     value={formData.caracteristicas.almacenamiento}
                                     onChange={handleCaracteristicasChange}
                                 />
+                                 <br />
                                 <label>Transferencia:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="transferencia:"
                                     value={formData.caracteristicas.transferencia}
                                     onChange={handleCaracteristicasChange}
                                 />
+                                 <br />
                                 <label>Dominio:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="dominio"
                                     value={formData.caracteristicas.dominio}
                                     onChange={handleCaracteristicasChange}
                                 />
+                                 <br />
                                 <label>Otros:</label>
-                                <input
+                                <input id="input-Form"
                                     type="text"
                                     name="otro"
                                     value={formData.caracteristicas.otro}
                                     onChange={handleCaracteristicasChange}
                                 />
                                 {/* Agrega más campos aquí según sea necesario */}
+                                <br />
                                 <button onClick={handleUpdate}>Actualizar</button>
                             </div>
                         )}
